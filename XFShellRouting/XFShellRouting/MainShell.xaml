@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="XFShellRouting.MainShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:XFShellRouting.Views"
+    mc:Ignorable="d">
+
+    <FlyoutItem
+        x:Name="shellAnimals"
+        FlyoutDisplayOptions="AsMultipleItems"
+        Route="animals">
+        <Tab
+            x:Name="shellDomestic"
+            Title="Domestic"
+            Route="domestic">
+            <ShellContent
+                Title="Cats"
+                ContentTemplate="{DataTemplate views:CatsPage}"
+                Route="cats" />
+            <ShellContent
+                x:Name="shellDogs"
+                Title="Dogs"
+                ContentTemplate="{DataTemplate views:DogsPage}"
+                Route="dogs" />
+        </Tab>
+        <ShellContent
+            Title="Monkeys"
+            ContentTemplate="{DataTemplate views:MonkeysPage}"
+            Route="monkeys" />
+        <ShellSection x:Name="shellElephants" Title="Elephants">
+            <ShellContent
+                Title="Elephants"
+                ContentTemplate="{DataTemplate views:ElephantsPage}"
+                Route="elephants" />
+        </ShellSection>
+        <ShellContent
+            x:Name="shellBears"
+            Title="Bears"
+            ContentTemplate="{DataTemplate views:BearsPage}"
+            Route="bears" />
+
+    </FlyoutItem>
+    <ShellSection x:Name="shellAbout" Title="About">
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate views:AboutPage}"
+            Route="about" />
+    </ShellSection>
+
+</Shell>
