@@ -12,6 +12,7 @@
                 HorizontalOptions="CenterAndExpand"
                 Text="MonkeysPage"
                 VerticalOptions="CenterAndExpand" />
+            <Button Clicked="Button_Clicked" Text="Go To Elephants page" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

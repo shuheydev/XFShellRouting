@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XFShellRouting.ViewModels;
 
 namespace XFShellRouting.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ElephantsPage : ContentPage
+    public partial class CatDetailPage2 : ContentPage
     {
-        public ElephantsPage()
+        public CatDetailPage2()
         {
             InitializeComponent();
+
+            this.BindingContext = new CatDetailPage2ViewModel();
         }
     }
 }

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace XFShellRouting.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MonkeysPage : ContentPage
+    public partial class ElephantDetailPage : ContentPage
     {
-        public MonkeysPage()
+        public ElephantDetailPage()
         {
             InitializeComponent();
         }

@@ -10,11 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace XFShellRouting.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DogsPage : ContentPage
+    public partial class ElephantsPage : ContentPage
     {
-        public DogsPage()
+        public ElephantsPage()
         {
             InitializeComponent();
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("..");
         }
     }
 }

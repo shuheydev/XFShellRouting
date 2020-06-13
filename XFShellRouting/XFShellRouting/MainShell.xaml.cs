@@ -44,6 +44,25 @@ namespace XFShellRouting
             //CurrentItem = shellAnimals;
             //shellAnimals.CurrentItem = shellBears;
             #endregion
+
+
+
+            #region Define Routes
+            //ShellContentからのページ遷移
+            //詳細ページへのRouteの書き方は一般的にはこんな感じになる
+            //どちらでもよい.
+            //1つのページへの複数Routeを登録しても良い.
+            //Routing.RegisterRoute("elephants/details", typeof(ElephantDetailPage));
+            Routing.RegisterRoute("elephantDetails", typeof(ElephantDetailPage));
+
+            //ShellContentに対してもRouteの登録が必要.
+            //でも普通はTabとかドロワーメニューから移動するものなのでいらないはず.
+            //試しにやってみた.
+            Routing.RegisterRoute("elephants", typeof(ElephantsPage));
+
+            Routing.RegisterRoute("catDetails", typeof(CatDetailsPage));
+            Routing.RegisterRoute("catDetails2", typeof(CatDetailPage2));
+            #endregion
         }
     }
 }
